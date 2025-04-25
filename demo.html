@@ -1,0 +1,1555 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>आदर्श अभ्यासिका - नाशिकमधील सर्वोत्तम अभ्यासिका</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: #333;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Language Toggle */
+        .language-toggle {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+            background: #0070c0;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 30px;
+            cursor: pointer;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+            display: flex;
+            align-items: center;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+        
+        .language-toggle:hover {
+            background: #005999;
+            transform: translateY(-2px);
+        }
+        
+        .language-toggle i {
+            margin-right: 8px;
+        }
+        
+        /* Header Styles */
+        header {
+            background: linear-gradient(to right, #0070c0, #58b0f0);
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            color: white;
+            font-size: 24px;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo i {
+            margin-right: 10px;
+            font-size: 28px;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav-links li {
+            margin-left: 30px;
+        }
+        
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+            position: relative;
+        }
+        
+        .nav-links a:hover {
+            color: #f0f0f0;
+        }
+        
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            background: white;
+            left: 0;
+            bottom: -5px;
+            transition: width 0.3s;
+        }
+        
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+        
+        .menu-toggle {
+            display: none;
+            color: white;
+            font-size: 24px;
+            cursor: pointer;
+        }
+        
+        /* Hero Section */
+        .hero {
+            position: relative;
+            height: 80vh;
+            min-height: 500px;
+            background: url('../images/s3.jpg') no-repeat center center/cover;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            color: white;
+            max-width: 700px;
+            padding: 0 20px;
+        }
+        
+        .hero-content h2 {
+            font-size: 48px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+        
+        .hero-content p {
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+        
+        .hero-buttons {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+        
+        .btn-primary {
+            background: #0070c0;
+            color: white;
+            box-shadow: 0 4px 10px rgba(0, 112, 192, 0.3);
+        }
+        
+        .btn-primary:hover {
+            background: #005999;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 15px rgba(0, 112, 192, 0.4);
+        }
+        
+        .btn-secondary {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+        
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.1);
+            transform: translateY(-3px);
+        }
+        
+        /* About Section */
+        .about-section {
+            padding: 100px 0;
+            background: #f9fbfd;
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        
+        .section-header h2 {
+            font-size: 36px;
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 15px;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-header h2::after {
+            content: '';
+            position: absolute;
+            width: 80px;
+            height: 4px;
+            background: #0070c0;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 2px;
+        }
+        
+        .about-wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 60px;
+            align-items: center;
+        }
+        
+        .about-image {
+            flex: 1;
+            min-width: 400px;
+            height: 500px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        }
+        
+        .about-image img {
+            width: 100%;
+            height: 500px;
+            display: block;
+            transition: transform 0.5s ease;
+        }
+        
+        .about-image:hover img {
+            transform: scale(1.05);
+        }
+        
+        .about-content {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .about-content h3 {
+            font-size: 24px;
+            font-weight: 600;
+            color: #0070c0;
+            margin-bottom: 20px;
+        }
+        
+        .about-content p {
+            margin-bottom: 25px;
+            font-size: 16px;
+            color: #555;
+            line-height: 1.8;
+        }
+        
+        .about-list {
+            list-style: none;
+            margin-bottom: 30px;
+        }
+        
+        .about-list li {
+            position: relative;
+            padding-left: 30px;
+            margin-bottom: 12px;
+            font-size: 16px;
+            color: #555;
+        }
+        
+        .about-list li:before {
+            content: "\f00c";
+            font-family: 'Font Awesome 5 Free';
+            font-weight: 900;
+            position: absolute;
+            left: 0;
+            top: 2px;
+            color: #0070c0;
+        }
+        
+        /* Features Section */
+        .features-section {
+            padding: 100px 0;
+            background: #fff;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+        
+        .feature-box {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+        }
+        
+        .feature-box:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+        }
+        
+        .feature-box::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: #0070c0;
+            border-radius: 5px 5px 0 0;
+        }
+        
+        .feature-icon {
+            width: 80px;
+            height: 80px;
+            background: #f0f8ff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 30px auto 20px;
+            font-size: 32px;
+            color: #0070c0;
+            transition: all 0.3s ease;
+        }
+        
+        .feature-box:hover .feature-icon {
+            background: #0070c0;
+            color: white;
+            transform: rotateY(180deg);
+        }
+        
+        .feature-content {
+            padding: 0 30px 30px;
+            text-align: center;
+        }
+        
+        .feature-content h3 {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: #333;
+        }
+        
+        .feature-content p {
+            font-size: 15px;
+            color: #666;
+            line-height: 1.7;
+        }
+        
+        .cta-section {
+            background: linear-gradient(to right, #0070c0, #58b0f0);
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 15px 40px rgba(0, 112, 192, 0.2);
+            text-align: center;
+            color: white;
+        }
+        
+        .cta-section h3 {
+            font-size: 28px;
+            margin-bottom: 15px;
+        }
+        
+        .cta-section p {
+            font-size: 16px;
+            margin-bottom: 30px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        /* Contact Section */
+        .contact-section {
+            padding: 100px 0;
+            background: #f9fbfd;
+        }
+        
+        .contact-wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+        }
+        
+        .contact-info {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .contact-info h3 {
+            font-size: 24px;
+            color: #0070c0;
+            margin-bottom: 20px;
+        }
+        
+        .contact-info p {
+            margin-bottom: 30px;
+            font-size: 16px;
+            color: #555;
+            line-height: 1.8;
+        }
+        
+        .contact-details {
+            list-style: none;
+            margin-bottom: 30px;
+        }
+        
+        .contact-details li {
+            position: relative;
+            padding-left: 30px;
+            margin-bottom: 15px;
+            font-size: 16px;
+            color: #555;
+        }
+        
+        .contact-details li i {
+            position: absolute;
+            left: 0;
+            top: 5px;
+            color: #0070c0;
+        }
+        
+        .contact-form {
+            flex: 1;
+            min-width: 300px;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: 12px 15px;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            transition: border-color 0.3s;
+        }
+        
+        .form-control:focus {
+            outline: none;
+            border-color: #0070c0;
+            box-shadow: 0 0 0 2px rgba(0, 112, 192, 0.1);
+        }
+        
+        textarea.form-control {
+            height: 120px;
+            resize: vertical;
+        }
+        
+        .submit-btn {
+            width: 100%;
+            padding: 14px;
+            background: #0070c0;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .submit-btn:hover {
+            background: #005999;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 15px rgba(0, 112, 192, 0.2);
+        }
+        
+        /* Footer */
+        footer {
+            background: #222;
+            color: #fff;
+            padding: 60px 0 30px;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-column h3 {
+            font-size: 18px;
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        
+        .footer-column h3::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 40px;
+            height: 3px;
+            background: #0070c0;
+        }
+        
+        .footer-links {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-links a {
+            color: #ccc;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-links a:hover {
+            color: #0070c0;
+        }
+        
+        .footer-bottom {
+            border-top: 1px solid #444;
+            padding-top: 20px;
+            text-align: center;
+            color: #aaa;
+            font-size: 14px;
+        }
+         /* Gallery Section Styles */
+         .gallery-section {
+    margin-top: 3rem;
+    background-color: white;
+    padding: 2rem;
+    width: 100%;
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.gallery-heading {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+       
+
+.overlay-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.6);
+    color: red;
+    font-size: 24px;
+    padding: 6px 12px;
+    border-radius: 50%;
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    border-radius: 8px;
+    height: 250px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.gallery-item:hover {
+    transform: scale(1.03);
+}
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.gallery-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0,0,0,0.7);
+    color: white;
+    padding: 0.5rem;
+    font-size: 0.9rem;
+    text-align: center;
+    transform: translateY(100%);
+    transition: transform 0.3s;
+}
+.gallery-item:hover .gallery-caption {
+    transform: translateY(0);
+}
+/* ======= Tablet View (768px and below) ======= */
+@media (max-width: 768px) {
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .modal-content {
+        width: 95%;
+        margin: 30px auto;
+    }
+
+    .gallery-caption {
+        font-size: 15px;
+    }
+
+    .overlay-icon {
+        font-size: 20px;
+        padding: 4px 10px;
+    }
+
+    .gallery-section {
+        padding: 1.5rem;
+    }
+}
+
+/* ======= Mobile View (480px and below) ======= */
+@media (max-width: 480px) {
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery-caption {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    .overlay-icon {
+        font-size: 18px;
+        padding: 2px 8px;
+    }
+
+    .close-btn {
+        font-size: 28px;
+    }
+
+    .gallery-section {
+        padding: 1rem;
+    }
+}
+        /* Modal styles for gallery */
+        .modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.9);
+    padding: 20px;
+    overflow: auto;
+}
+
+.modal-content {
+    max-width: 800px;
+    margin: 40px auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.modal-img {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+        
+        /* Responsive Styles */
+        @media (max-width: 991px) {
+            .hero-content h2 {
+                font-size: 40px;
+            }
+            
+            .section-header h2 {
+                font-size: 32px;
+            }
+            
+            .about-content h3, .cta-section h3, .contact-info h3 {
+                font-size: 22px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .hero {
+                height: 70vh;
+            }
+            
+            .hero-content h2 {
+                font-size: 36px;
+            }
+            
+            .nav-links {
+                position: fixed;
+                top: 80px;
+                left: -100%;
+                width: 100%;
+                height: calc(100vh - 80px);
+                background: #0070c0;
+                flex-direction: column;
+                align-items: center;
+                justify-content: flex-start;
+                padding-top: 50px;
+                transition: left 0.3s;
+            }
+            
+            .nav-links.active {
+                left: 0;
+            }
+            
+            .nav-links li {
+                margin: 0 0 20px;
+            }
+            
+            .menu-toggle {
+                display: block;
+            }
+            
+            .section-header {
+                margin-bottom: 40px;
+            }
+            
+            .section-header h2 {
+                font-size: 28px;
+            }
+            
+            .about-section, .features-section, .contact-section {
+                padding: 70px 0;
+            }
+            
+            .features-grid {
+                gap: 20px;
+                margin-bottom: 40px;
+            }
+            
+            .cta-section {
+                padding: 30px 20px;
+            }
+            
+            .cta-section h3 {
+                font-size: 24px;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .hero-content h2 {
+                font-size: 30px;
+            }
+            
+            .hero-content p {
+                font-size: 16px;
+            }
+            
+            .btn {
+                width: 100%;
+                margin-bottom: 10px;
+            }
+            
+            .hero-buttons {
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            .section-header h2 {
+                font-size: 24px;
+            }
+            
+            .about-content h3, .cta-section h3, .contact-info h3 {
+                font-size: 20px;
+            }
+            
+            .language-toggle {
+                top: 10px;
+                right: 10px;
+                padding: 6px 12px;
+                font-size: 14px;
+            }
+        }
+        /* अधिकारी सेक्शन स्टाईल */
+        .adhikari-section {
+            /* display: none; सुरवातीला लपवा */
+            padding: 20px 15px;
+            /* background-color: #f5f5f5; */
+            border-radius: 8px;
+            margin-bottom: 30px;
+        }
+        
+        /* .adhikari-section.active {
+            display: block;
+        } */
+        
+        .section-heading {
+            color: #333;
+            margin: 0 0 30px 0;
+            text-align: center;
+            position: relative;
+            padding-bottom: 15px;
+            font-size: 28px;
+        }
+        
+        .section-heading::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 3px;
+            background-color: #3f51b5;
+        }
+        
+        .adhikari-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 20px;
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto; /* सेंटर्ड */
+    padding: 0 15px;
+}
+
+        
+        .adhikari-card {
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .adhikari-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+        
+        .adhikari-card img {
+            width: 100%;
+            height: 300px;
+            aspect-ratio: 1/1;
+            object-fit: cover;
+            display: block;
+        }
+        
+        .adhikari-info {
+            padding: 15px;
+        }
+        
+        .adhikari-name {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #333;
+        }
+        
+        .adhikari-position {
+            font-size: 16px;
+            color: #666;
+            margin-bottom: 10px;
+        }
+        
+        .adhikari-contact {
+            font-size: 14px;
+            color: #777;
+        }
+        
+        .adhikari-contact p {
+            margin-bottom: 5px;
+        }
+        @media (min-width: 576px) {
+    .adhikari-grid {
+        grid-template-columns: repeat(2, 1fr);
+        
+    }
+}
+
+@media (min-width: 768px) {
+    .adhikari-grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 25px;
+    }
+}
+
+@media (min-width: 992px) {
+    .adhikari-grid {
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 30px;
+    }
+}
+
+    </style>
+</head>
+<body>
+    <!-- Language Toggle Button -->
+    <div class="language-toggle" id="languageToggle">
+        <i class="fas fa-globe"></i>
+        <span class="toggle-text" data-mr="English" data-en="मराठी">English</span>
+    </div>
+
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <i class="fas fa-book-reader"></i>
+                    <span class="translate" data-mr="आदर्श अभ्यासिका" data-en="Adarsh Study Center">आदर्श अभ्यासिका</span>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="#" class="translate" data-mr="मुख्यपृष्ठ" data-en="Home">मुख्यपृष्ठ</a></li>
+                    <li><a href="#about" class="translate" data-mr="आमच्याबद्दल" data-en="About Us">आमच्याबद्दल</a></li>
+                    <li><a href="#features" class="translate" data-mr="सुविधा" data-en="Features">सुविधा</a></li>
+                    <li><a href="#pricing" class="translate" data-mr="सदस्यता" data-en="Membership">सदस्यता</a></li>
+                    <li><a href="#gallary" class="translate" data-mr="गॅलरी" data-en="Contact">गॅलरी</a></li>
+                    <li><a href="#contact" class="translate" data-mr="संपर्क" data-en="Contact">संपर्क</a></li>
+                </ul>
+                <div class="menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h2 class="translate" data-mr="नाशिकमधील सर्वोत्तम अभ्यासिका" data-en="Best Study Center in Nashik">नाशिकमधील सर्वोत्तम अभ्यासिका</h2>
+                <p class="translate" data-mr="संपूर्ण एसी हॉल, मोफत इंटरनेट, शांत वातावरण आणि आरामदायी सुविधांसह आदर्श अभ्यासिका नाशिकमधील पहिल्यावहिल्या अभ्यासिकेत तुमचे स्वागत आहे!" data-en="Welcome to Nashik's premier study center with full AC hall, free internet, calm environment and comfortable amenities!">संपूर्ण एसी हॉल, मोफत इंटरनेट, शांत वातावरण आणि आरामदायी सुविधांसह आदर्श अभ्यासिका नाशिकमधील पहिल्यावहिल्या अभ्यासिकेत तुमचे स्वागत आहे!</p>
+                <div class="hero-buttons">
+                    <a href="#contact" class="btn btn-primary translate" data-mr="आज नोंदणी करा" data-en="Register Today">आज नोंदणी करा</a>
+                    <a href="#features" class="btn btn-secondary translate" data-mr="अधिक जाणून घ्या" data-en="Learn More">अधिक जाणून घ्या</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="translate" data-mr="आमच्याबद्दल" data-en="About Us">आमच्याबद्दल</h2>
+            </div>
+            
+            <div class="about-wrapper">
+                <div class="about-image">
+                    <img src="../images/ss1.jpeg" alt="Study Center Interior">
+                </div>
+                
+                <div class="about-content">
+                    <h3 class="translate" data-mr="आमची कथा" data-en="Our Story">आमची कथा</h3>
+                    <p class="translate" data-mr="२०१८ मध्ये स्थापित, आदर्श अभ्यासिका नाशिकमधील अभ्यासूंसाठी एक शांत आणि प्रेरणादायी जागा म्हणून सुरू झाली. विद्यार्थी, अभ्यासक आणि व्यावसायिकांना उच्च-दर्जाची अभ्यास सुविधा प्रदान करण्याच्या उद्देशाने आम्ही प्रारंभ केला." data-en="Established in 2018, Adarsh Study Center began as a peaceful and inspiring space for Nashik's scholars. We started with the mission to provide students, researchers, and professionals with a high-quality study facility.">२०१८ मध्ये स्थापित, आदर्श अभ्यासिका नाशिकमधील अभ्यासूंसाठी एक शांत आणि प्रेरणादायी जागा म्हणून सुरू झाली. विद्यार्थी, अभ्यासक आणि व्यावसायिकांना उच्च-दर्जाची अभ्यास सुविधा प्रदान करण्याच्या उद्देशाने आम्ही प्रारंभ केला.</p>
+                    
+                    <h3 class="translate" data-mr="आमचे ध्येय" data-en="Our Mission">आमचे ध्येय</h3>
+                    <p class="translate" data-mr="आमचे ध्येय म्हणजे नाशिकमधील सर्व अभ्यासूंसाठी एक उत्कृष्ट वातावरण तयार करणे जेथे त्यांना त्यांच्या लक्ष्यांपर्यंत पोहोचण्यासाठी प्रोत्साहित केले जाईल. आम्ही अभ्यासासाठी आवश्यक असलेल्या शांत, सुसज्ज आणि प्रेरणादायी वातावरणाद्वारे यशाची पायाभरणी करतो." data-en="Our mission is to create an excellent environment for all scholars in Nashik where they will be encouraged to reach their goals. We lay the foundation for success through a calm, well-equipped, and motivating atmosphere essential for studying.">आमचे ध्येय म्हणजे नाशिकमधील सर्व अभ्यासूंसाठी एक उत्कृष्ट वातावरण तयार करणे जेथे त्यांना त्यांच्या लक्ष्यांपर्यंत पोहोचण्यासाठी प्रोत्साहित केले जाईल. आम्ही अभ्यासासाठी आवश्यक असलेल्या शांत, सुसज्ज आणि प्रेरणादायी वातावरणाद्वारे यशाची पायाभरणी करतो.</p>
+                    
+                    <h3 class="translate" data-mr="आमचे मूल्य" data-en="Our Values">आमचे मूल्य</h3>
+                    <ul class="about-list">
+                        <li class="translate" data-mr="उत्कृष्टता - अभ्यासासाठी सर्वोत्तम सुविधा प्रदान करणे" data-en="Excellence - Providing the best facilities for studying">उत्कृष्टता - अभ्यासासाठी सर्वोत्तम सुविधा प्रदान करणे</li>
+                        <li class="translate" data-mr="सहकार्य - अभ्यासूंसाठी सहकार्याचे वातावरण" data-en="Collaboration - Creating an environment of cooperation for scholars">सहकार्य - अभ्यासूंसाठी सहकार्याचे वातावरण</li>
+                        <li class="translate" data-mr="समानता - सर्वांसाठी समान संधी" data-en="Equality - Equal opportunities for all">समानता - सर्वांसाठी समान संधी</li>
+                        <li class="translate" data-mr="नावीन्यता - अद्ययावत सुविधा आणि तंत्रज्ञान" data-en="Innovation - Up-to-date amenities and technology">नावीन्यता - अद्ययावत सुविधा आणि तंत्रज्ञान</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="translate" data-mr="आमच्या सुविधा" data-en="Our Features">आमच्या सुविधा</h2>
+            </div>
+            
+            <div class="features-grid">
+                <div class="feature-box">
+                    <div class="feature-icon">
+                        <i class="fas fa-snowflake"></i>
+                    </div>
+                    <div class="feature-content">
+                        <h3 class="translate" data-mr="संपूर्ण वातानुकूलित" data-en="Fully Air Conditioned">संपूर्ण वातानुकूलित</h3>
+                        <p class="translate" data-mr="अभ्यासासाठी योग्य तापमान असलेले संपूर्ण वातानुकूलित हॉल" data-en="Fully air-conditioned halls with optimal temperature for studying">अभ्यासासाठी योग्य तापमान असलेले संपूर्ण वातानुकूलित हॉल</p>
+                    </div>
+                </div>
+                
+                <div class="feature-box">
+                    <div class="feature-icon">
+                        <i class="fas fa-wifi"></i>
+                    </div>
+                    <div class="feature-content">
+                        <h3 class="translate" data-mr="मोफत इंटरनेट" data-en="Free Internet">मोफत इंटरनेट</h3>
+                        <p class="translate" data-mr="अतिवेगवान फायबर इंटरनेट कनेक्शन सोबत अखंडित वायफाय" data-en="Uninterrupted WiFi with high-speed fiber internet connection">अतिवेगवान फायबर इंटरनेट कनेक्शन सोबत अखंडित वायफाय</p>
+                    </div>
+                </div>
+                
+                <div class="feature-box">
+                    <div class="feature-icon">
+                        <i class="fas fa-volume-mute"></i>
+                    </div>
+                    <div class="feature-content">
+                        <h3 class="translate" data-mr="शांत वातावरण" data-en="Quiet Environment">शांत वातावरण</h3>
+                        <p class="translate" data-mr="ध्वनिरोधक भिंती आणि कक्षांसह अभ्यासासाठी शांत वातावरण" data-en="Quiet study environment with soundproof walls and cabins">ध्वनिरोधक भिंती आणि कक्षांसह अभ्यासासाठी शांत वातावरण</p>
+                    </div>
+                </div>
+                
+                <div class="feature-box">
+                    <div class="feature-icon">
+                        <i class="fas fa-plug"></i>
+                    </div>
+                    <div class="feature-content">
+                        <h3 class="translate" data-mr="पॉवर बॅकअप" data-en="Power Backup">पॉवर बॅकअप</h3>
+                        <p class="translate" data-mr="अखंडित विद्युत पुरवठा आणि प्रत्येक डेस्कवर चार्जिंग पॉइंट" data-en="Uninterrupted power supply and charging points at every desk">अखंडित विद्युत पुरवठा आणि प्रत्येक डेस्कवर चार्जिंग पॉइंट</p>
+                    </div>
+                </div>
+                
+                <div class="feature-box">
+                    <div class="feature-icon">
+                        <i class="fas fa-chair"></i>
+                    </div>
+                    <div class="feature-content">
+                        <h3 class="translate" data-mr="आरामदायी फर्निचर" data-en="Comfortable Furniture">आरामदायी फर्निचर</h3>
+                        <p class="translate" data-mr="दीर्घकालीन अभ्यासासाठी अर्गोनॉमिक खुर्च्या आणि सुसज्ज डेस्क" data-en="Ergonomic chairs and well-equipped desks for long study sessions">दीर्घकालीन अभ्यासासाठी अर्गोनॉमिक खुर्च्या आणि सुसज्ज डेस्क</p>
+                    </div>
+                </div>
+                
+                <div class="feature-box">
+                    <div class="feature-icon">
+                        <i class="fas fa-mug-hot"></i>
+                    </div>
+                    <div class="feature-content">
+                        <h3 class="translate" data-mr="रिफ्रेशमेंट झोन" data-en="Refreshment Zone">रिफ्रेशमेंट झोन</h3>
+                        <p class="translate" data-mr="चहा, कॉफी आणि हलके नाश्त्यासह ब्रेक घेण्यासाठी रिफ्रेशमेंट कॉर्नर" data-en="Refreshment corner for breaks with tea, coffee, and light snacks">चहा, कॉफी आणि हलके नाश्त्यासह ब्रेक घेण्यासाठी रिफ्रेशमेंट कॉर्नर</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="cta-section">
+                <h3 class="translate" data-mr="आमची सदस्यता योजना" data-en="Our Membership Plans">आमची सदस्यता योजना</h3>
+                <p class="translate" data-mr="दैनिक, साप्ताहिक, मासिक आणि वार्षिक सदस्यता योजना उपलब्ध आहेत. तुमच्या गरजांनुसार निवडा आणि आजच नोंदणी करा!" data-en="Daily, weekly, monthly, and annual membership plans available. Choose according to your needs and register today!">दैनिक, साप्ताहिक, मासिक आणि वार्षिक सदस्यता योजना उपलब्ध आहेत. तुमच्या गरजांनुसार निवडा आणि आजच नोंदणी करा!</p>
+                <a href="#contact" class="btn btn-primary translate" data-mr="सदस्य व्हा" data-en="Become a Member">सदस्य व्हा</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="about-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="translate" data-mr="सदस्यता योजना" data-en="Membership Plans">सदस्यता योजना</h2>
+            </div>
+            
+            <div class="pricing-container" style="display: flex; flex-wrap: wrap; gap: 30px; justify-content: center;">
+                <!-- Daily Plan -->
+                <div class="pricing-box" style="flex: 1; min-width: 250px; max-width: 300px; background: white; border-radius: 10px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.08); transition: transform 0.3s ease, box-shadow 0.3s ease;">
+                    <div class="pricing-header" style="background: #0070c0; color: white; padding: 20px; text-align: center;">
+                        <h3 class="translate" data-mr="दैनिक" data-en="Daily">दैनिक</h3>
+                        <div class="price" style="font-size: 32px; font-weight: 700; margin: 15px 0;">
+                            <span class="translate" data-mr="₹150" data-en="₹150">₹150</span>
+                            <span class="period" style="font-size: 16px; font-weight: 400;">/day</span>
+                        </div>
+                    </div>
+                    <div class="pricing-features" style="padding: 30px;">
+                        <ul style="list-style: none; padding: 0;">
+                            <li style="padding-left: 25px; position: relative; margin-bottom: 15px;">
+                                <i class="fas fa-check" style="color: #0070c0; position: absolute; left: 0; top: 2px;"></i>
+                                <span class="translate" data-mr="पूर्ण दिवस प्रवेश (१० तास)" data-en="Full day access (10 hours)">पूर्ण दिवस प्रवेश (१० तास)</span>
+                            </li>
+                            <li style="padding-left: 25px; position: relative; margin-bottom: 15px;">
+                                <i class="fas fa-check" style="color: #0070c0; position: absolute; left: 0; top: 2px;"></i>
+                                <span class="translate" data-mr="वायफाय आणि पॉवर" data-en="WiFi and power">वायफाय आणि पॉवर</span>
+                            </li>
+                            <li style="padding-left: 25px; position: relative; margin-bottom: 15px;">
+                                <i class="fas fa-check" style="color: #0070c0; position: absolute; left: 0; top: 2px;"></i>
+                                <span class="translate" data-mr="एसी वातावरण" data-en="AC environment">एसी वातावरण</span>
+                            </li>
+                        </ul>
+                        <a href="#contact" class="btn btn-primary" style="width: 100%; text-align: center; margin-top: 20px;">
+                            <span class="translate" data-mr="नोंदणी करा" data-en="Register">नोंदणी करा</span>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Weekly Plan -->
+                <div class="pricing-box" style="flex: 1; min-width: 250px; max-width: 300px; background: white; border-radius: 10px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.08); transition: transform 0.3s ease, box-shadow 0.3s ease;">
+                    <div class="pricing-header" style="background: #0070c0; color: white; padding: 20px; text-align: center;">
+                        <h3 class="translate" data-mr="साप्ताहिक" data-en="Weekly">साप्ताहिक</h3>
+                        <div class="price" style="font-size: 32px; font-weight: 700; margin: 15px 0;">
+                            <span class="translate" data-mr="₹800" data-en="₹800">₹800</span>
+                            <span class="period" style="font-size: 16px; font-weight: 400;">/week</span>
+                        </div>
+                    </div>
+                    <div class="pricing-features" style="padding: 30px;">
+                        <ul style="list-style: none; padding: 0;">
+                            <li style="padding-left: 25px; position: relative; margin-bottom: 15px;">
+                                <i class="fas fa-check" style="color: #0070c0; position: absolute; left: 0; top: 2px;"></i>
+                                <span class="translate" data-mr="७ दिवस प्रवेश" data-en="7 days access">७ दिवस प्रवेश</span>
+                            </li>
+                            <li style="padding-left: 25px; position: relative; margin-bottom: 15px;">
+                                <i class="fas fa-check" style="color: #0070c0; position: absolute; left: 0; top: 2px;"></i>
+                                <span class="translate" data-mr="रिझर्व्ड सीट" data-en="Reserved seat">रिझर्व्ड सीट</span>
+                            </li>
+                            <li style="padding-left: 25px; position: relative; margin-bottom: 15px;">
+                                <i class="fas fa-check" style="color: #0070c0; position: absolute; left: 0; top: 2px;"></i>
+                                <span class="translate" data-mr="मोफत चहा/कॉफी" data-en="Free tea/coffee">मोफत चहा/कॉफी</span>
+                            </li>
+                        </ul>
+                        <a href="#contact" class="btn btn-primary" style="width: 100%; text-align: center; margin-top: 20px;">
+                            <span class="translate" data-mr="नोंदणी करा" data-en="Register">नोंदणी करा</span>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Monthly Plan -->
+                <div class="pricing-box" style="flex: 1; min-width: 250px; max-width: 300px; background: white; border-radius: 10px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.08); transition: transform 0.3s ease, box-shadow 0.3s ease; transform: translateY(-20px); border: 2px solid #0070c0;">
+                    <div class="popular-tag" style="background: #0070c0; color: white; text-align: center; padding: 5px 0; font-size: 14px; font-weight: 600;">
+                        <span class="translate" data-mr="लोकप्रिय" data-en="Popular">लोकप्रिय</span>
+                    </div>
+                    <div class="pricing-header" style="background: #0070c0; color: white; padding: 20px; text-align: center;">
+                        <h3 class="translate" data-mr="मासिक" data-en="Monthly">मासिक</h3>
+                        <div class="price" style="font-size: 32px; font-weight: 700; margin: 15px 0;">
+                            <span class="translate" data-mr="₹2,800" data-en="₹2,800">₹2,800</span>
+                            <span class="period" style="font-size: 16px; font-weight: 400;">/month</span>
+                        </div>
+                    </div>
+                    <div class="pricing-features" style="padding: 30px;">
+                        <ul style="list-style: none; padding: 0;">
+                            <li style="padding-left: 25px; position: relative; margin-bottom: 15px;">
+                                <i class="fas fa-check" style="color: #0070c0; position: absolute; left: 0; top: 2px;"></i>
+                                <span class="translate" data-mr="३० दिवस प्रवेश" data-en="30 days access">३० दिवस प्रवेश</span>
+                            </li>
+                            <li style="padding-left: 25px; position: relative; margin-bottom: 15px;">
+                                <i class="fas fa-check" style="color: #0070c0; position: absolute; left: 0; top: 2px;"></i>
+                                <span class="translate" data-mr="रिझर्व्ड सीट" data-en="Reserved seat">रिझर्व्ड सीट</span>
+                            </li>
+                            <li style="padding-left: 25px; position: relative; margin-bottom: 15px;">
+                                <i class="fas fa-check" style="color: #0070c0; position: absolute; left: 0; top: 2px;"></i>
+                                <span class="translate" data-mr="मोफत रिफ्रेशमेंट" data-en="Free refreshments">मोफत रिफ्रेशमेंट</span>
+                            </li>
+                            <li style="padding-left: 25px; position: relative; margin-bottom: 15px;">
+                                <i class="fas fa-check" style="color: #0070c0; position: absolute; left: 0; top: 2px;"></i>
+                                <span class="translate" data-mr="लॉकर सुविधा" data-en="Locker facility">लॉकर सुविधा</span>
+                            </li>
+                        </ul>
+                        <a href="#contact" class="btn btn-primary" style="width: 100%; text-align: center; margin-top: 20px;">
+                            <span class="translate" data-mr="नोंदणी करा" data-en="Register">नोंदणी करा</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div id="gallary" class="gallery-section">
+    <div class="section-header">
+        <h2 class="translate" data-mr="गॅलरी" data-en="Gallery">गॅलरी</h2>
+    </div>
+    <div class="gallery-heading">
+        <h2 class="translate" data-en="Library Gallery" data-mr="ग्रंथालय गॅलरी">ग्रंथालय गॅलरी</h2>
+        <p class="translate" data-en="Enjoy the various moments captured in our library." data-mr="आमच्या ग्रंथालयातील विविध क्षणांच्या छायाचित्रांचा आनंद घ्या">
+            आमच्या ग्रंथालयातील विविध क्षणांच्या छायाचित्रांचा आनंद घ्या
+        </p>
+    </div>
+
+    <div class="gallery-grid">
+        <!-- Gallery Item -->
+        <div class="gallery-item" onclick="openModal('../images/s2.jpg', 'Main Reading Room', 'Our main reading room provides a comfortable space for students.', 'मुख्य वाचन कक्ष', 'आमचा मुख्य वाचन कक्ष विद्यार्थ्यांसाठी आरामदायी जागा आहे.')">
+            <img src="../images/s2.jpg" alt="मुख्य वाचन कक्ष">
+            <div class="overlay-icon">+</div>
+            <div class="gallery-caption translate" data-en="Main Reading Room" data-mr="मुख्य वाचन कक्ष">मुख्य वाचन कक्ष</div>
+        </div>
+
+        <div class="gallery-item" onclick="openModal('../images/img1.jpg', 'Study Room', 'Specially designed room for quiet study.', 'अभ्यासिका', 'शांत अभ्यास करण्यासाठी खास तयार केलेल्या अभ्यासिका.')">
+            <img src="../images/img1.jpg" alt="अभ्यासिका">
+            <div class="overlay-icon">+</div>
+            <div class="gallery-caption translate" data-en="Study Room" data-mr="अभ्यासिका">अभ्यासिका</div>
+        </div>
+
+        <div class="gallery-item" onclick="openModal('../images/img3.jpg', 'Computer Room', 'Modern computer lab for digital research.', 'संगणक कक्ष', 'आमचा आधुनिक संगणक कक्ष सर्व प्रकारच्या डिजिटल संशोधनासाठी उपलब्ध आहे.')">
+            <img src="../images/img3.jpg" alt="संगणक कक्ष">
+            <div class="overlay-icon">+</div>
+            <div class="gallery-caption translate" data-en="Computer Room" data-mr="संगणक कक्ष">संगणक कक्ष</div>
+        </div>
+
+        <div class="gallery-item" onclick="openModal('../images/img4.jpg', 'Reference Section', 'Rare collection of books on various subjects.', 'संग्रह विभाग', 'विविध विषयांवरील दुर्मिळ पुस्तकांचा संग्रह.')">
+            <img src="../images/img4.jpg" alt="संग्रह विभाग">
+            <div class="overlay-icon">+</div>
+            <div class="gallery-caption translate" data-en="Reference Section" data-mr="संग्रह विभाग">संग्रह विभाग</div>
+        </div>
+
+        <div class="gallery-item" onclick="openModal('../images/img5.jpg', 'Children Section', 'Specially designed section for kids to enjoy reading.', 'बालकांसाठी विभाग', 'मुलांना वाचनाची आवड निर्माण व्हावी यासाठी खास तयार केलेला विभाग.')">
+            <img src="../images/img5.jpg" alt="बालकांसाठी विभाग">
+            <div class="overlay-icon">+</div>
+            <div class="gallery-caption translate" data-en="Children Section" data-mr="बालकांसाठी विभाग">बालकांसाठी विभाग</div>
+        </div>
+
+        <div class="gallery-item" onclick="openModal('../images/img2.jpeg', 'Discussion Room', 'Space available for group study and discussions.', 'चर्चा कक्ष', 'सामूहिक अभ्यास व चर्चेसाठी उपलब्ध असलेला कक्ष.')">
+            <img src="../images/img2.jpeg" alt="चर्चा कक्ष">
+            <div class="overlay-icon">+</div>
+            <div class="gallery-caption translate" data-en="Discussion Room" data-mr="चर्चा कक्ष">चर्चा कक्ष</div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal -->
+<div class="modal" id="galleryModal">
+    <span class="close-btn" onclick="closeModal()">&times;</span>
+    <div class="modal-content">
+        <img id="modalImg" class="modal-img" src="" alt="">
+        <h3 id="modalTitle" class="translate"></h3>
+        <p id="modalDesc" class="translate"></p>
+    </div>
+</div>
+
+<!-- Modal for gallery images -->
+<div class="modal" id="galleryModal">
+    <span class="close-btn" onclick="closeModal()">&times;</span>
+    <div class="modal-content">
+        <img id="modalImg" class="modal-img" src="" alt="">
+        <h3 id="modalTitle"></h3>
+        <p id="modalDesc"></p>
+    </div>
+</div>
+<div class="adhikari-section" id="adhikariSection">
+    <h2 class="section-heading translate" data-en="Officer Team" data-mr="अधिकारी संघ">अधिकारी संघ</h2>
+    <div class="adhikari-grid">
+        
+        <div class="adhikari-card">
+            <img src="../images/p2.jpeg" alt="श्री. राजेश पाटील">
+            <div class="adhikari-info">
+                <div class="adhikari-name translate" data-en="Mr. Rajesh Patil" data-mr="श्री. राजेश पाटील">श्री. राजेश पाटील</div>
+                <div class="adhikari-position translate" data-en="President" data-mr="अध्यक्ष">अध्यक्ष</div>
+                <div class="adhikari-contact">
+                    <p>Email: rajesh.patil@example.com</p>
+                    <p>Phone: 987-654-3210</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="adhikari-card">
+            <img src="../images/p5.jpeg" alt="श्रीमती सुनीता जोशी">
+            <div class="adhikari-info">
+                <div class="adhikari-name translate" data-en="Mrs. Sunita Joshi" data-mr="श्रीमती सुनीता जोशी">श्रीमती सुनीता जोशी</div>
+                <div class="adhikari-position translate" data-en="Vice President" data-mr="उपाध्यक्ष">उपाध्यक्ष</div>
+                <div class="adhikari-contact">
+                    <p>Email: sunita.joshi@example.com</p>
+                    <p>Phone: 987-654-3211</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="adhikari-card">
+            <img src="../images/p6.jpeg" alt="श्री. अमित शर्मा">
+            <div class="adhikari-info">
+                <div class="adhikari-name translate" data-en="Mr. Amit Sharma" data-mr="श्री. अमित शर्मा">श्री. अमित शर्मा</div>
+                <div class="adhikari-position translate" data-en="Secretary" data-mr="सचिव">सचिव</div>
+                <div class="adhikari-contact">
+                    <p>Email: amit.sharma@example.com</p>
+                    <p>Phone: 987-654-3212</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="adhikari-card">
+            <img src="../images/p4.jpeg" alt="श्री. विजय गायकवाड">
+            <div class="adhikari-info">
+                <div class="adhikari-name translate" data-en="Mr. Vijay Gaikwad" data-mr="श्री. विजय गायकवाड">श्री. विजय गायकवाड</div>
+                <div class="adhikari-position translate" data-en="Treasurer" data-mr="कोषाध्यक्ष">कोषाध्यक्ष</div>
+                <div class="adhikari-contact">
+                    <p>Email: vijay.gaikwad@example.com</p>
+                    <p>Phone: 987-654-3213</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="adhikari-card">
+            <img src="../images/p3.jpeg" alt="श्रीमती प्रिया देशमुख">
+            <div class="adhikari-info">
+                <div class="adhikari-name translate" data-en="Mrs. Priya Deshmukh" data-mr="श्रीमती प्रिया देशमुख">श्रीमती प्रिया देशमुख</div>
+                <div class="adhikari-position translate" data-en="Member" data-mr="सदस्य">सदस्य</div>
+                <div class="adhikari-contact">
+                    <p>Email: priya.deshmukh@example.com</p>
+                    <p>Phone: 987-654-3214</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="adhikari-card">
+            <img src="../images/p1.jpeg" alt="श्री. संतोष कुलकर्णी">
+            <div class="adhikari-info">
+                <div class="adhikari-name translate" data-en="Mr. Santosh Kulkarni" data-mr="श्री. संतोष कुलकर्णी">श्री. संतोष कुलकर्णी</div>
+                <div class="adhikari-position translate" data-en="Member" data-mr="सदस्य">सदस्य</div>
+                <div class="adhikari-contact">
+                    <p>Email: santosh.kulkarni@example.com</p>
+                    <p>Phone: 987-654-3215</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="translate" data-mr="संपर्क करा" data-en="Contact Us">संपर्क करा</h2>
+            </div>
+            
+            <div class="contact-wrapper">
+                <div class="contact-info">
+                    <h3 class="translate" data-mr="आम्हाला भेटा" data-en="Visit Us">आम्हाला भेटा</h3>
+                    <p class="translate" data-mr="आम्हाला प्रश्न आहेत? आमच्याशी संपर्क साधण्यासाठी खालील माहितीचा वापर करा किंवा आमच्या संपर्क फॉर्मवर संदेश पाठवा." data-en="Have questions? Use the information below to contact us or send a message on our contact form.">आम्हाला प्रश्न आहेत? आमच्याशी संपर्क साधण्यासाठी खालील माहितीचा वापर करा किंवा आमच्या संपर्क फॉर्मवर संदेश पाठवा.</p>
+                    
+                    <ul class="contact-details">
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span class="translate" data-mr="कॉलेज रोड, नाशिक - ४२२००५, महाराष्ट्र" data-en="College Road, Nashik - 422005, Maharashtra">कॉलेज रोड, नाशिक - ४२२००५, महाराष्ट्र</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <span>+91 9876543210</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <span>info@adarshstudy.com</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-clock"></i>
+                            <span class="translate" data-mr="सोम - शनि: सकाळी ७ ते रात्री ९" data-en="Mon - Sat: 7 AM to 9 PM">सोम - शनि: सकाळी ७ ते रात्री ९</span>
+                        </li>
+                    </ul>
+                    
+                    <div class="social-links" style="margin-top: 30px;">
+                        <a href="#" style="display: inline-block; width: 40px; height: 40px; line-height: 40px; text-align: center; background: #0070c0; color: white; border-radius: 50%; margin-right: 10px; transition: all 0.3s ease;"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" style="display: inline-block; width: 40px; height: 40px; line-height: 40px; text-align: center; background: #0070c0; color: white; border-radius: 50%; margin-right: 10px; transition: all 0.3s ease;"><i class="fab fa-instagram"></i></a>
+                        <a href="#" style="display: inline-block; width: 40px; height: 40px; line-height: 40px; text-align: center; background: #0070c0; color: white; border-radius: 50%; margin-right: 10px; transition: all 0.3s ease;"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Your Name" data-mr-placeholder="तुमचे नाव" data-en-placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" class="form-control" placeholder="Your Email" data-mr-placeholder="तुमचा ईमेल" data-en-placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" class="form-control" placeholder="Your Phone" data-mr-placeholder="तुमचा फोन" data-en-placeholder="Your Phone" required>
+                        </div>
+                        <div class="form-group">
+                            <select class="form-control" required>
+                                <option value="" class="translate" data-mr="सदस्यता प्रकार निवडा" data-en="Select Membership Type">सदस्यता प्रकार निवडा</option>
+                                <option value="daily" class="translate" data-mr="दैनिक" data-en="Daily">दैनिक</option>
+                                <option value="weekly" class="translate" data-mr="साप्ताहिक" data-en="Weekly">साप्ताहिक</option>
+                                <option value="monthly" class="translate" data-mr="मासिक" data-en="Monthly">मासिक</option>
+                                <option value="annual" class="translate" data-mr="वार्षिक" data-en="Annual">वार्षिक</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <textarea class="form-control" rows="5" placeholder="Message (Optional)" data-mr-placeholder="संदेश (ऐच्छिक)" data-en-placeholder="Message (Optional)"></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn translate" data-mr="आता नोंदणी करा" data-en="Register Now">आता नोंदणी करा</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3 class="translate" data-mr="आदर्श अभ्यासिका" data-en="Adarsh Study Center">आदर्श अभ्यासिका</h3>
+                    <p class="translate" data-mr="नाशिकमधील प्रिमियर अभ्यास सुविधा, तुमच्या अभ्यासासाठी शांत आणि आरामदायी वातावरण प्रदान करते." data-en="Nashik's premier study facility offering a quiet and comfortable environment for your studies." style="color: #aaa; margin-bottom: 20px; line-height: 1.8;">नाशिकमधील प्रिमियर अभ्यास सुविधा, तुमच्या अभ्यासासाठी शांत आणि आरामदायी वातावरण प्रदान करते.</p>
+                </div>
+                
+                <div class="footer-column">
+                    <h3 class="translate" data-mr="द्रुत लिंक्स" data-en="Quick Links">द्रुत लिंक्स</h3>
+                    <ul class="footer-links">
+                        <li><a href="#" class="translate" data-mr="मुख्यपृष्ठ" data-en="Home">मुख्यपृष्ठ</a></li>
+                        <li><a href="#about" class="translate" data-mr="आमच्याबद्दल" data-en="About Us">आमच्याबद्दल</a></li>
+                        <li><a href="#features" class="translate" data-mr="सुविधा" data-en="Features">सुविधा</a></li>
+                        <li><a href="#pricing" class="translate" data-mr="सदस्यता" data-en="Membership">सदस्यता</a></li>
+                        <li><a href="#contact" class="translate" data-mr="संपर्क" data-en="Contact">संपर्क</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3 class="translate" data-mr="कार्यवेळ" data-en="Working Hours">कार्यवेळ</h3>
+                    <ul class="footer-links">
+                        <li class="translate" data-mr="सोमवार - शनिवार" data-en="Monday - Saturday">सोमवार - शनिवार</li>
+                        <li class="translate" data-mr="सकाळी ७:०० - रात्री ९:००" data-en="7:00 AM - 9:00 PM">सकाळी ७:०० - रात्री ९:००</li>
+                        <li class="translate" data-mr="रविवार" data-en="Sunday">रविवार</li>
+                        <li class="translate" data-mr="सकाळी ९:०० - संध्याकाळी ६:००" data-en="9:00 AM - 6:00 PM">सकाळी ९:०० - संध्याकाळी ६:००</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p class="translate" data-mr="© २०२५ आदर्श अभ्यासिका. सर्व हक्क राखीव." data-en="© 2025 Adarsh Study Center. All Rights Reserved.">© २०२५ आदर्श अभ्यासिका. सर्व हक्क राखीव.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Language Toggle Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Language Toggle Functionality
+            const languageToggle = document.getElementById('languageToggle');
+            const toggleText = document.querySelector('.toggle-text');
+            let currentLang = 'mr'; // Default language is Marathi
+            
+            languageToggle.addEventListener('click', function() {
+                if (currentLang === 'mr') {
+                    currentLang = 'en';
+                    toggleText.textContent = toggleText.getAttribute('data-en');
+                } else {
+                    currentLang = 'mr';
+                    toggleText.textContent = toggleText.getAttribute('data-mr');
+                }
+                
+                // Update all translatable elements
+                document.querySelectorAll('.translate').forEach(function(element) {
+                    element.textContent = element.getAttribute('data-' + currentLang);
+                });
+                
+                // Update form placeholders
+                document.querySelectorAll('[data-mr-placeholder]').forEach(function(element) {
+                    element.setAttribute('placeholder', element.getAttribute('data-' + currentLang + '-placeholder'));
+                });
+            });
+            
+            // Mobile Menu Toggle
+            const menuToggle = document.querySelector('.menu-toggle');
+            const navLinks = document.querySelector('.nav-links');
+            
+            if (menuToggle) {
+                menuToggle.addEventListener('click', function() {
+                    navLinks.classList.toggle('active');
+                });
+            }
+        });
+        // Modal functionality for gallery
+        function openModal(title, description) {
+            const modal = document.getElementById('galleryModal');
+            const modalImg = document.getElementById('modalImg');
+            const modalTitle = document.getElementById('modalTitle');
+            const modalDesc = document.getElementById('modalDesc');
+            
+            modal.style.display = 'block';
+            modalImg.src = '/api/placeholder/800/500';
+            modalTitle.textContent = title;
+            modalDesc.textContent = description;
+        }
+        
+        function closeModal() {
+            document.getElementById('galleryModal').style.display = 'none';
+        }
+        
+        // Close modal when clicking outside of it
+        window.onclick = function(event) {
+            const modal = document.getElementById('galleryModal');
+            if (event.target == modal) {
+                modal.style.display = 'none';
+            }
+        }
+         // अधिकारी सेक्शन टॉगल करण्यासाठी स्क्रिप्ट
+         document.addEventListener('DOMContentLoaded', function() {
+            const adhikariToggle = document.getElementById('adhikariToggle');
+            const adhikariSection = document.getElementById('adhikariSection');
+            
+            adhikariToggle.addEventListener('click', function() {
+                adhikariSection.classList.toggle('active');
+            });
+        });
+        function openModal(imageSrc, titleEn, descEn, titleMr, descMr) {
+    document.getElementById('galleryModal').style.display = 'block';
+    document.getElementById('modalImg').src = imageSrc;
+
+    const titleEl = document.getElementById('modalTitle');
+    const descEl = document.getElementById('modalDesc');
+
+    titleEl.innerText = titleMr;
+    descEl.innerText = descMr;
+
+    titleEl.setAttribute('data-en', titleEn);
+    titleEl.setAttribute('data-mr', titleMr);
+    titleEl.classList.add('translate');
+
+    descEl.setAttribute('data-en', descEn);
+    descEl.setAttribute('data-mr', descMr);
+    descEl.classList.add('translate');
+
+    toggleLanguage(currentLanguage); // update modal content language
+}
+
+function closeModal() {
+    document.getElementById('galleryModal').style.display = 'none';
+}
+    </script>
+</body>
+</html>    
